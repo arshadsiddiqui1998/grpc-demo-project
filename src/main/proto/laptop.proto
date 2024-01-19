@@ -1,0 +1,39 @@
+syntax="proto3";
+option java_multiple_files=true;
+option java_package="com.vinsguru.models";
+import "common/address.proto";
+import "common/car.proto";
+import "google/protobuf/wrappers.proto";
+
+
+/*message Laptop{
+//v1
+  string brand=1;
+  int32 year=2;
+
+}*/
+
+
+/*message Laptop{
+  //v2
+  string brand=1;
+  int32 model=2;
+  Type type=3;
+}*/
+//V3
+
+message Laptop{
+  //v2
+  string brand=1;
+reserved 2;
+  reserved "year","model";
+  int32 price=3;
+  Type type=4;
+}
+enum Type{
+
+  DEL=0;
+  HP=1;
+  MAC=3;
+  THINKPAD=4;
+}
