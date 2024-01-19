@@ -31,7 +31,7 @@ public class CompositionDemo {
         List<Car> cars=new ArrayList<>();
         cars.add(accord);
         cars.add(civic);
-        Person saleem = Person
+        Person person = Person
                 .newBuilder()
                 .setName("Moin")
                 .setAge(Int32Value.newBuilder().setValue(25).build())
@@ -39,7 +39,7 @@ public class CompositionDemo {
 
         System.out.println(
 
-                saleem
+                person
         );
     }
 }
